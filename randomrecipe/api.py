@@ -141,7 +141,7 @@ class MealDB:
             if (
                 (re.fullmatch(expression, step.lower()) is None)
                 and (re.fullmatch(expression2, step.lower()) is None)
-                and (step != "")
+                and (len(step) > 2)
             ):
                 # it is a `step X`
                 new_steps.append(step)
