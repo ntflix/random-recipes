@@ -3,10 +3,6 @@ body {
   padding: 0 1rem;
 }
 
-.ingredient-row {
-  display: inline;
-}
-
 .recipe {
   display: grid;
   grid-template-columns: 50% 50%;
