@@ -1,0 +1,37 @@
+<link rel="stylesheet" type="text/css" href="{{ static('style.css') }}">
+
+<h1>{{recipe.name}}</h1>
+<hr />
+
+<div class="recipe">
+    <img class="recipe-image" src="{{recipe.image_url}}">
+
+    <div class="recipe-body">
+        <h2>Ingredients</h2>
+
+        <ul class="ingredients-list">
+            {% for ingredient in recipe.ingredients %}
+            <li>
+                <div class="ingredient-row">
+                    <p>{{ingredient.quantity}} {{ingredient.name}}</p>
+                    {% if ingredient.notes %}
+                    <sub><i>{{ingredient.notes}}</i></sub>
+                    {% endif %}
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="recipe-body">
+        <h2>Steps</h2>
+        <ol class="steps-list">
+            {% for step in recipe.steps %}
+            <li>
+                <div class="step">
+                    <p>{{step}}</p>
+                </div>
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
+</div>

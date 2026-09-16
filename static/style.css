@@ -1,0 +1,29 @@
+body {
+  font-family: sans-serif;
+  padding: 0 1rem;
+}
+
+.ingredient-row {
+  display: inline;
+}
+
+.recipe {
+  display: grid;
+  grid-template-columns: 300px auto auto;
+  gap: 2rem;
+  padding: 1rem 0 0 0;
+}
+
+.recipe-image {
+  max-width: 300px;
+  border: 2px solid black;
+}
+
+.recipe-body {
+  min-width: 300px;
+}
+
+@media print {
+  .recipe-image {
+    display: none;
+  }
