@@ -1,0 +1,6 @@
+services:
+    randomrecipes:
+        build: .
+        container_name: random_recipes
+        ports:
+          - 8733:8733
